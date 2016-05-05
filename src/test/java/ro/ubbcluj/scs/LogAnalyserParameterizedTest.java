@@ -30,17 +30,18 @@ public class LogAnalyserParameterizedTest {
 
     @Before
     public void setUp() throws Exception {
-        logAnalyser = new LogAnalyser(new FakeFileManager());
+        FileManagerFactory.getInstance().setFileManager(new FakeFileManager());
+        logAnalyser = new LogAnalyser();
     }
 
     @After
     public void tearDown() throws Exception {
-        // Nothing TODO
+        // Nothing to do ...
     }
 
     @Test
     public void isValidLogFileName_validName_returnsTrue() throws Exception {
         Assert.assertEquals(fExpected, logAnalyser.isValidLogFileName(fInput));
     }
-
+	
 }

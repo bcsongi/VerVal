@@ -7,5 +7,5 @@ public class FakeFileManager implements FileManager {
     public String getLogNameExt() {
         return FILE_EXTENSION;
     }
-
+	
 }

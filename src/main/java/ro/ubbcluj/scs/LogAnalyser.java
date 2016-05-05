@@ -4,14 +4,8 @@ public class LogAnalyser {
 
     private FileManager fileManager;
 
-    public LogAnalyser(){}
-
-    public LogAnalyser(FileManager fileManager) {
-        this.fileManager = fileManager;
-    }
-
-    public void setFileManager(FileManager fileManager) {
-        this.fileManager = fileManager;
+    public LogAnalyser() {
+        this.fileManager = FileManagerFactory.getInstance().getFileManager();
     }
 
     public boolean isValidLogFileName(String name) {
@@ -23,5 +17,5 @@ public class LogAnalyser {
         }
         return false;
     }
-
+	
 }
